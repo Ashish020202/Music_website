@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- HERE CSS STARTS -->
+<style>
+    .bg{
+        color:greenyellow;
+         text-align: center;
+         margin: 0%;
+    }
+    .bg1{
+       color:yellow; 
+       text-align: center;
+       font-family: cursive;
+
+    }
+    p{
+        color: azure;
+    }
+    body{
+        background:url(https://images.macrumors.com/t/hi1_a2IdFGRGMsJ0x31SdD_IcRk=/1600x/article-new/2018/05/apple-music-note.jpg);
+        opacity: 0.8;
+        color: white;
+    }
+    .navbar ul{
+        overflow: auto;
+        
+    }
+    .navbar{
+       height: 30px;   
+    }
+
+    .navbar li{
+        float: left;
+        margin: 0% 0%;
+        list-style: none;
+        font-size:20px;
+    }
+
+    .navbar li a{
+        list-style: none;
+        padding: 2px;
+        color: azure;
+        text-decoration: none;
+        margin: 0 15px ;
+    }
+    .detail{
+        color: yellow;
+        align-items: center;
+        margin-left: 95px;
+        margin-bottom: 200px;
+        
+    }
+    .logo{
+        float: right;
+        margin: 58px;
+        display: flex;
+        margin-bottom: 389px;
+        align-items: center;
+        margin-top: -62px;
+    }
+    img{
+        border-radius: 50% ;
+        width: 150px;
+    }
+    .heading{
+        margin-left: 10px;
+        text-shadow: 2px 2px yellow;
+    }
+    #icon{
+        width: 80px;
+        cursor: pointer;
+    
+    }
+    p{
+        color: yellow;
+    }
+
+</style>
+
+<!-- HERE HTML STARTS -->
+<body>
+    <header>
+    <nav class="navbar">
+        <ul>
+             <li><a href="#">HOME</a</li>
+            <li><a href="https://spotify.com">CONNECT</a</li>
+            <li><a href="#">SPECIFICATION</a</li>
+            <li><a href="#">DETAILS</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div>
+        <h1 class="bg"><strong>THE REAL SOUND</strong></h1>
+        <h2 class="bg1">listening is everything</h2>
+    </div>
+      <details class="detail">
+        <summary class="summary">KNOW MORE ABOUT US</summary>
+         Zeal College
+      </details>
+         <div class="heading">
+            <h1>POPULAR ARTISTS</h1>
+         </div>
+      <div class="logo">
+        <p>Click here to listen</p>
+        <img src="pause.png" id="icon">
+      </div>
+      <div class="artist">
+        <img src="https://assets-in.bmscdn.com/iedb/artist/images/website/poster/large/arijit-singh-1048083-24-03-2017-18-02-00.jpg" alt="">
+        <img src="https://img-www.tf-cdn.com/artist/10/alan-walker.jpeg"alt="">
+        <div class="art">
+        <img src="https://yt3.ggpht.com/ytc/AKedOLS-bAhFDDWkkNHNAllvjjvyl0SdEclVoRVLDd4sSg=s900-c-k-c0x00ffffff-no-rj" alt="">
+        <img src="https://i.scdn.co/image/ab6761610000e5eb12a2ef08d00dd7451a6dbed6" alt="">
+        </div>
+        
+         <audio id="mysong">
+            <source src="Faded_192(PaglaSongs).mp3" type="audio/mp3">
+         </audio>
+
+         <!-- HERE JAVA SCRIPT START -->
+         <script>
+            let mysong = document.getElementById("mysong");
+            let icon = document.getElementById("icon");
+            icon.onclick = function(){
+                if(mysong.paused){
+                    mysong.play();
+                    icon.src="play.png";
+                }
+                else{
+                    mysong.pause();
+                    icon.src="pause.png";
+                }
+            }
+         </script>
+      </div>
